@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    border: solid 1px black;
+}
+.imgBox{
+    /* temp sizing */
+    width: 10rem;
+    height: 10rem;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
