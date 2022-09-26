@@ -8,6 +8,7 @@ include("header.php");
 setcookie('point', $point, strtotime("+1 year"));
 
 ?>
+
 <div id="pointcard">
     <?php
     //stamp
