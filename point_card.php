@@ -19,7 +19,7 @@ setcookie('point',$point, strtotime("+1 year"));
             padding:2rem;
             border: 1px solid grey;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             justify-items: center;
             grid-row-gap: 2rem;
         }
@@ -52,7 +52,7 @@ setcookie('point',$point, strtotime("+1 year"));
         echo'<div class="stampe"></div>';
       }
 //space
-for ($i=1; $i<=8-$point; $i++){
+for ($i=1; $i<=10-$point; $i++){
     echo'<div class="space"></div>';
   }
     
