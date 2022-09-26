@@ -16,7 +16,7 @@
         <nav>
             <a href="index.php">About</a>
             <a href="map.php">Map</a>
-            <a href="pointcard.php">Pointcard</a>
+            <a href="point_card.php">Pointcard</a>
         </nav>
     </header>
     <main>
