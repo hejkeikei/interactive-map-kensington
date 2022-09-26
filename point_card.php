@@ -9,39 +9,6 @@ setcookie('point', $point, strtotime("+1 year"));
 
 ?>
 
-
-<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    #pointcard {
-        padding: 2rem;
-        border: 1px solid grey;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-items: center;
-        grid-row-gap: 2rem;
-    }
-
-    #pointcard div {
-        width: 15vw;
-        height: 15vw;
-        border-radius: 50%;
-
-    }
-
-    .space {
-        border: 2px dotted grey;
-        background-color: rgb(220, 220, 220);
-    }
-
-    .stampe {
-        background-color: brown;
-    }
-</style>
-
-
 <div id="pointcard">
     <?php
     //stamp
