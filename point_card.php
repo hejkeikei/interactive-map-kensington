@@ -42,14 +42,14 @@ setcookie('point', $point, strtotime("+1 year"));
 </style>
 
 
-<div id="pointcard">
+<div id="card">
     <?php
     //stamp
     for ($i = 1; $i <= $point; $i++) {
         echo '<div class="stampe"></div>';
     }
     //space
-    for ($i = 1; $i <= 8 - $point; $i++) {
+    for ($i = 1; $i <= 10 - $point; $i++) {
         echo '<div class="space"></div>';
     }
 
