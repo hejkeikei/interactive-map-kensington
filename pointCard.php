@@ -1,6 +1,12 @@
 <?php
-if(isset($_COOKIE['point'])){
- echo" <p> you have".$_POST['point']. "points </p>";
+if(isset($_POST['submit'])){
+     if($_POST['answer']==2){
+        
+        $_ 
+     }
+
+// if(isset($_COOKIE['point'])){
+echo" <p> you have".$_POST['point']. "points </p>";
 
 }elseif(!isset($_COOKIE['point'])){
     $point=1;
@@ -9,12 +15,6 @@ if(isset($_COOKIE['point'])){
 }elseif($_COOKIE['point']==8){
     echo "<p>Congratulations! You got 8 Points, This is your coffee coupon</p>";//小七店員：機八點 換咖啡喔<3 
 }
-   
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@ if(isset($_COOKIE['point'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Point Card-test</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,24 +32,22 @@ if(isset($_COOKIE['point'])){
 
 <form action="pointCard.php" method="post">
 <legend>How many colour in the Canada flag?</legend>
-<label for="1">1</label>
-<input type="radio" name="1" id="1">
-<label for="1">2</label>
-<input type="radio" name="2" id="2">
-<label for="1">3</label>
-<input type="radio" name="3" id="3">
+<label for="answer">1</label>
+<input type="radio" name="answer" value="1" id="1">
+<label for="answer">2</label>
+<input type="radio" name="answer" value="2" id="2">
+<label for="answer">3</label>
+<input type="radio" name="answer" value="3" id="3">
 <?php
-$_COOKIES['point'];
+// if($_POST['answer']==2){
+//     $_COOKIE['point']++; 
+// }else{
+//     echo"<p> Sorry, Wrong answer! please try again.</p>";
+// }
+
 ?>
-
-<legend>How many colour in Janpan flag?</legend>
-<label for="1">1</label>
-<input type="radio" name="1" id="1">
-<label for="1">2</label>
-<input type="radio" name="2" id="2">
-<label for="1">3</label>
-<input type="radio" name="3" id="3">
-
+<input type="submit" value="Send">
+</form>
  
 
 </body>
