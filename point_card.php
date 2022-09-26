@@ -1,5 +1,5 @@
 <?php
-$point=3;
+$point=6;
 // $point= $_COOKIE['point']; 
 setcookie('point',$point, strtotime("+1 year"));
 
@@ -33,9 +33,9 @@ setcookie('point',$point, strtotime("+1 year"));
             border: 2px dotted grey;
             background-color: rgb(220, 220, 220);
         }
-        /* .stampe{
+        .stampe{
             background-color: brown;
-        } */
+        }
         
     </style>
 </head>
@@ -44,15 +44,20 @@ setcookie('point',$point, strtotime("+1 year"));
         <h1> Point Card</h1>
     </header>
 <main>
+    
 <div id="card">
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
+<?php
+//stamp
+    for ($i=1; $i<=$point; $i++){
+        echo'<div class="stampe"></div>';
+      }
+//space
+for ($i=1; $i<=8-$point; $i++){
+    echo'<div class="space"></div>';
+  }
+    
+    ?>
+
     
 </div>
 
