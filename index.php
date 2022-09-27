@@ -1,7 +1,7 @@
 <?php
 include("header.php");
 ?>
-<div id="about">
+<section id="about">
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste
     dolorem necessitatibus dolor aspernatur corporis error. A, voluptates
@@ -27,9 +27,11 @@ include("header.php");
       <img src="" alt="" width="" height="">
     </div>
   </div>
-</div>
+</section>
 </main>
-<footer></footer>
+<?php
+include("footer.php");
+?>
 </body>
 
 </html>

@@ -2,14 +2,69 @@
     box-sizing: border-box;
     border: solid 1px black;
 }
+:root{
+    --white : #fff;
+    --theme: #56e6e5;
+}
+header{
+    text-align: center;
+}
+main{
+    position: relative;
+    min-height: 75vh;
+}
+section{
+    width: 100%;
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 1rem;
+}
+path{
+    position: relative;
+    cursor: pointer;
+
+}
+path:hover{
+    /* Testing purpose */
+    fill: red;
+}
 .imgBox{
     /* temp sizing */
     width: 10rem;
     height: 10rem;
 }
+#locateContainer{
+    position: relative;
+
+}
+#question{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--white);
+}
+.tooltip{
+    background-color:var(--white);
+    width: 8rem;
+    height: 4rem;
+    padding: 1rem;
+    position: absolute;
+    top:0;
+    left: 50%;
+}
+.btn{
+    background-color: var(--theme);
+    color: var(--white);
+    display: block;
+    cursor: pointer;
+}
 .row{
     display: flex;
     justify-content: space-between;
+}
+.hidden{
+    display: none;
 }
 #pointcard {
     padding: 2rem;
@@ -28,7 +83,7 @@
 }
 .space {
     border: 2px dotted grey;
-    background-color: rgb(220, 220, 220);
+    background-color: var(--white);
 }
 .stampe {
     background-color: brown;

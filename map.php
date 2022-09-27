@@ -2,31 +2,35 @@
 include("header.php");
 ?>
 <div id="map">
-
+  <!-- tempoary SVG element ***just for testing*** -->
+  <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792.3 123.09">
+    <g id="Layer_1-2">
+      <g id="locateContainer">
+        <path d="M0,121.47V16.89H39.3V91.59h42.71v29.88H0Z" />
+        <!-- <div class="tooltip"></div> -->
+        <g class="tooltip">
+          <text>TEST</text>
+          <rect>TEST</rect>
+        </g>
+        <path d="M92.73,121.47v-48.72h-10.72l3.25-28.26h46.77V121.47h-39.3Zm2.6-84.77L110.91,0h30.21l-17.05,36.7h-28.74Z" />
+        <path d="M143.39,121.47V12.02h39.3V47.42c2.16-1.19,5.06-2.25,8.69-3.17,3.63-.92,7.44-1.38,11.45-1.38,10.93,0,18.94,2.54,24.03,7.63,5.09,5.09,7.63,12.94,7.63,23.55v47.42h-39.3v-44.17c0-3.68-1.79-5.52-5.36-5.52-1.08,0-2.35,.32-3.82,.97-1.46,.65-2.57,1.41-3.33,2.27v46.44h-39.3Z" />
+        <path d="M287.59,123.09c-16.35,0-28.5-3.35-36.46-10.07-7.96-6.71-11.94-16.73-11.94-30.04s3.98-23.33,11.94-30.04c7.96-6.71,20.11-10.07,36.46-10.07,32.37,0,48.56,13.37,48.56,40.11s-16.19,40.11-48.56,40.11Zm-17.86-86.39L285.32,0h30.21l-17.05,36.7h-28.74Zm17.86,58.3c2.81,0,4.93-.87,6.33-2.6,1.41-1.73,2.11-4.87,2.11-9.42s-.71-7.69-2.11-9.42c-1.41-1.73-3.52-2.6-6.33-2.6s-4.76,.87-6.17,2.6c-1.41,1.73-2.11,4.87-2.11,9.42s.7,7.69,2.11,9.42c1.41,1.73,3.46,2.6,6.17,2.6Z" />
+        <path d="M353.2,121.47l-24.36-104.58h38.33l7.96,39.95,6.01-22.25V16.89h31.99l11.69,40.11,8.93-40.11h38.16l-24.2,104.58h-34.26l-12.5-41.25-13.48,41.25h-34.26Z" />
+        <path d="M513.32,123.09c-16.35,0-28.5-3.35-36.46-10.07-7.96-6.71-11.94-16.73-11.94-30.04s3.98-23.33,11.94-30.04c7.96-6.71,20.11-10.07,36.46-10.07,32.37,0,48.56,13.37,48.56,40.11s-16.19,40.11-48.56,40.11Zm0-28.09c2.81,0,4.93-.87,6.33-2.6,1.41-1.73,2.11-4.87,2.11-9.42s-.71-7.69-2.11-9.42c-1.41-1.73-3.52-2.6-6.33-2.6s-4.76,.87-6.17,2.6c-1.41,1.73-2.11,4.87-2.11,9.42s.7,7.69,2.11,9.42c1.41,1.73,3.46,2.6,6.17,2.6Z" />
+        <path d="M569.99,121.47V44.5h38.49l.81,4.38c2.81-1.51,6.52-2.9,11.12-4.14,4.6-1.24,9.39-1.87,14.37-1.87v28.91c-4.01,0-8.5,.27-13.48,.81-4.98,.54-8.99,1.35-12.02,2.44v46.44h-39.3Z" />
+        <path d="M672.95,123.09c-11.37,0-19.35-2.27-23.95-6.82-4.6-4.55-6.9-11.58-6.9-21.11V12.02h39.3V89.96c0,2.06,.41,3.57,1.22,4.55,.81,.97,2.3,1.46,4.47,1.46,3.03,0,5.74-.49,8.12-1.46v24.36c-3.36,1.41-6.55,2.46-9.58,3.17-3.03,.7-7.25,1.06-12.67,1.06Z" />
+        <path d="M734.82,123.09c-7.25,0-13.62-1.25-19.08-3.74-5.47-2.49-9.72-6.5-12.75-12.02-3.03-5.52-4.55-12.83-4.55-21.92,0-9.63,1.62-17.59,4.87-23.87,3.25-6.28,7.71-10.96,13.4-14.05,5.68-3.09,12.2-4.63,19.57-4.63,2.81,0,5.79,.27,8.93,.81,3.14,.54,5.74,1.25,7.79,2.11V12.02h39.3V121.47h-34.1l-1.79-5.03c-2.82,2.06-5.93,3.68-9.34,4.87-3.41,1.19-7.5,1.79-12.26,1.79Zm11.37-28.09c1.51,0,2.76-.22,3.74-.65,.97-.43,2-1.03,3.08-1.79v-19.16c-1.95-1.62-4.22-2.44-6.82-2.44-2.38,0-4.25,1.19-5.6,3.57-1.35,2.38-2.03,5.9-2.03,10.56s.67,7.47,2.03,8.44c1.35,.97,3.22,1.46,5.6,1.46Z" />
+      </g>
+    </g>
+  </svg>
 </div>
-<section>
-  <div class="imgBox"><img src="" alt=""></div>
-  <h2>building A</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit illum non, molestias earum inventore optio ipsum numquam doloribus ullam ab quia consequatur suscipit vel ex! Soluta delectus molestiae distinctio beatae accusantium fuga, voluptatum cupiditate vel aliquid libero corrupti dolore ab quam voluptatem sequi omnis culpa, porro, magni dolor perferendis exercitationem.</p>
-  <button>Challange</button>
-</section>
-<section id="question">
-  <!-- please populate this section with database using the format below -->
-  <fieldset>
-    <legend>What is the name of building?</legend>
-  </fieldset>
-  <input type="radio" name="question" id="A" value="A">
-  <label for="A">Answer A</label>
-  <input type="radio" name="question" id="B" value="B">
-  <label for="B">Answer B</label>
-  <input type="radio" name="question" id="C" value="C">
-  <label for="C">Answer C</label>
-  <input type="submit" value="Answer">
-  <!-- please populate this section with database using the format above -->
-</section>
+
 
 </main>
-<footer></footer>
+<?php
+include("footer.php");
+?>
+<script src="map.js"></script>
 </body>
 
 </html>
