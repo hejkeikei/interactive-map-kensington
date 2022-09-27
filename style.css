@@ -70,7 +70,7 @@ path:hover{
     padding: 2rem;
     border: 1px solid grey;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
     grid-row-gap: 2rem;
 }
