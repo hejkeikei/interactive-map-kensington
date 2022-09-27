@@ -39,6 +39,9 @@ setcookie('point', $point, strtotime("+1 year"));
 </section>
 
 </main>
+<?php
+include("footer.php");
+?>
 <script>
 
 </script>
