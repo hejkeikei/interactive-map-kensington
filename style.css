@@ -6,6 +6,12 @@
     --white : #fff;
     --theme: #56e6e5;
 }
+html,body{
+    padding: 0;
+    margin: 0;
+    /* tempoary font */
+    font-family: 'Courier New', Courier, monospace;
+}
 header{
     text-align: center;
 }
@@ -21,21 +27,29 @@ section{
 }
 path{
     position: relative;
-    cursor: pointer;
-
 }
-path:hover{
+.pin:hover{
     /* Testing purpose */
     fill: red;
+    cursor: pointer;
 }
 .imgBox{
+    max-width: 100ch;
     /* temp sizing */
-    width: 10rem;
+    width: 100%;
     height: 10rem;
 }
+#map{
+    max-width: 150ch;
+    margin: 0 auto;
+    overflow: scroll;
+    /* height: 80vh; */
+}
+/* svg{
+    scale: 3;
+} */
 #locateContainer{
     position: relative;
-
 }
 #question{
     position: absolute;
@@ -58,19 +72,32 @@ path:hover{
     color: var(--white);
     display: block;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
-.row{
+/* .row{
     display: flex;
     justify-content: space-between;
-}
+} */
 .hidden{
     display: none;
 }
+/* responsive flexbox */
+.flexbox{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Building info detials */
+#buildingInfo{
+    display: flex;
+}
+
+/* Pointcard page */
 #pointcard {
     padding: 2rem;
-    border: 1px solid grey;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
     grid-row-gap: 2rem;
 }
@@ -87,4 +114,14 @@ path:hover{
 }
 .stampe {
     background-color: brown;
+}
+
+/* media query */
+@media screen and (min-width:600px) {
+    .flexbox{
+        flex-direction: row;
+    }
+    #pointcard {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
 }

@@ -1,5 +1,5 @@
 // Map and tooltip
-const allhover = document.querySelectorAll("path");
+const allhover = document.querySelectorAll(".pin");
 const root = document.getElementById("map");
 // console.log(allhover);
 allhover.forEach((elem,index)=>{
@@ -9,16 +9,17 @@ allhover.forEach((elem,index)=>{
     let y = locate.y;
     let addname = "test "+index;
     var ids = "building"+index;
-    createTooltip(y,x,addname,index);
+    createTooltip(y/2,x,addname,index);
     var allTooltips = document.querySelectorAll(".tooltip");
     elem.addEventListener("click",()=>{
         var coriTooltip = document.getElementById(ids);
         allTooltips.forEach((e)=>{
-            // console.log(e.id);
             if(e.id===ids){
+                console.log(e.id);
                 coriTooltip.classList.remove("hidden");
             }else{
-                coriTooltip.classList="hidden tooltip";
+                console.log("else ",e.id);
+                e.classList.add("hidden");
             }
         });
     });
