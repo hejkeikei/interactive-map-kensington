@@ -1,8 +1,14 @@
 <?php
+<<<<<<< Updated upstream
 
 $point=6;
-
+=======
+ob_start();
 include("header.php");
+$point = 6;
+>>>>>>> Stashed changes
+
+
 
 // $point= $_COOKIE['point']; 
 setcookie('point', $point, strtotime("+1 year"));
@@ -75,3 +81,4 @@ for ($i=1; $i<=8-$point; $i++){
 </body>
 
 </html>
+<?php ob_end_flush(); ?>
