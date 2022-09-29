@@ -1,7 +1,7 @@
 // Map and tooltip
 const allhover = document.querySelectorAll(".pin");
 const root = document.getElementById("map");
-// console.log(allhover);
+
 allhover.forEach((elem,index)=>{
     // console.log(elem.getBoundingClientRect());
     let locate = elem.getBoundingClientRect();
@@ -9,17 +9,18 @@ allhover.forEach((elem,index)=>{
     let y = locate.y;
     let addname = "test "+index;
     var ids = "building"+index;
-    createTooltip(y/2,x,addname,index);
-    var allTooltips = document.querySelectorAll(".tooltip");
+    createTooltip(x,y,addname,index);
+    // show corresponding tooltip and hide the others
     elem.addEventListener("click",()=>{
+        var allTooltips = document.querySelectorAll(".tooltip");
         var coriTooltip = document.getElementById(ids);
-        allTooltips.forEach((e)=>{
-            if(e.id===ids){
-                console.log(e.id);
-                coriTooltip.classList.remove("hidden");
+        coriTooltip.classList.remove("hidden");
+        allTooltips.forEach((tip,key)=>{
+            // console.log(key," ",index)
+            if(key-index!=0){
+                tip.classList="tooltip hidden";
             }else{
-                console.log("else ",e.id);
-                e.classList.add("hidden");
+                console.log("don't hide this");
             }
         });
     });
@@ -37,8 +38,8 @@ function createTooltip(x,y,text,index){
  elem.id="building"+index;
  elem.classList.add("tooltip");
  elem.classList.add("hidden");
- elem.style.top=x+"px";
- elem.style.left=y+"px";
+ elem.style.top=y/2+"px";
+ elem.style.left=(x-50)+"px";
  elem.innerHTML=text;
  elem.appendChild(elemBtn);
  root.appendChild(elem);

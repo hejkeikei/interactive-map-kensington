@@ -1,7 +1,7 @@
 <?php
 include("header.php");
 ?>
-<section id="buildingInfo" class="flexbox straight">
+<section id="buildingInfo" class="flexbox">
     <!-- please populate this section with database using the format below -->
     <div class="imgBox"><img src="" alt="" width="" height=""></div>
     <div class="group">
