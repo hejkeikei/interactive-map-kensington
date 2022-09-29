@@ -5,6 +5,7 @@
 :root{
     --white : #fff;
     --theme: #56e6e5;
+    --dark: #000;
 }
 html,body{
     padding: 0;
@@ -12,7 +13,7 @@ html,body{
     /* tempoary font */
     font-family: 'Courier New', Courier, monospace;
 }
-header{
+h1,h2,h3,h4,h5,h6,header,footer{
     text-align: center;
 }
 main{
@@ -30,33 +31,16 @@ path{
 }
 .pin:hover{
     /* Testing purpose */
-    fill: red;
-    cursor: pointer;
+    fill: var(--theme);
+    cursor: pointer;   
 }
+
+/* Reusable components */
 .imgBox{
     max-width: 100ch;
     /* temp sizing */
     width: 100%;
     height: 10rem;
-}
-#map{
-    max-width: 150ch;
-    margin: 0 auto;
-    overflow: scroll;
-    /* height: 80vh; */
-}
-/* svg{
-    scale: 3;
-} */
-#locateContainer{
-    position: relative;
-}
-#question{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: var(--white);
 }
 .tooltip{
     background-color:var(--white);
@@ -75,13 +59,16 @@ path{
     text-decoration: none;
     text-align: center;
 }
+
+
+/* Display and layout */
+.hidden{
+    display: none;
+}
 /* .row{
     display: flex;
     justify-content: space-between;
 } */
-.hidden{
-    display: none;
-}
 /* responsive flexbox */
 .flexbox{
     display: flex;
@@ -91,6 +78,25 @@ path{
 /* Building info detials */
 #buildingInfo{
     display: flex;
+}
+
+/* Specific secitons & IDs*/
+
+#map{
+    max-width: 150ch;
+    margin: 0 auto;
+    overflow: scroll;
+    /* height: 80vh; */
+}
+#locateContainer{
+    position: relative;
+}
+#question{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--white);
 }
 
 /* Pointcard page */
@@ -103,8 +109,8 @@ path{
 }
 
 #pointcard div {
-    width: 15vw;
-    height: 15vw;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
 
 }
@@ -115,6 +121,7 @@ path{
 .stampe {
     background-color: brown;
 }
+
 
 /* media query */
 @media screen and (min-width:600px) {

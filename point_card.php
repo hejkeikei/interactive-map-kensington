@@ -8,8 +8,8 @@ include("header.php");
 setcookie('point', $point, strtotime("+1 year"));
 
 ?>
-
-<div id="pointcard">
+<h2>Your Points</h2>
+<section id="pointcard">
     <?php
     //stamp
     for ($i = 1; $i <= $point; $i++) {
@@ -21,18 +21,8 @@ setcookie('point', $point, strtotime("+1 year"));
     }
 
     ?>
-</div>
-<h2>Your Points</h2>
-<div id="poitcard">
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-    <div class="space stampe"></div>
-</div>
+</section>
+
 <!-- render a coffee coupon here if meet the criteria -->
 <section id="coupon">
 
