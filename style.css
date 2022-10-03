@@ -30,7 +30,7 @@ main{
     min-height: 75vh;
 }
 section{
-    width: 100%;
+    /* width: 100%; */
     max-width: 80ch;
     margin: 0 auto;
     padding: 1rem;
@@ -86,10 +86,10 @@ path{
 .pa-sm{
     padding: .5rem;
 }
-/* .row{
+.row{
     display: flex;
     justify-content: space-between;
-} */
+}
 /* responsive flexbox */
 .flexbox{
     display: flex;
@@ -121,6 +121,10 @@ path{
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: var(--white);
+}
+#about{
+    outline: solid 5px var(--theme);
+    margin: 1rem;
 }
 
 /* Pointcard page */

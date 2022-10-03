@@ -17,10 +17,7 @@ include("header.php");
     ratione, facilis repellendus alias, ipsa dolore, expedita molestiae?
     Minima, eos quia sequi deleniti ipsum amet vero.
   </p>
-  <div class="flexbox">
-    <div class="imgBox">
-      <img src="" alt="" width="" height="">
-    </div>
+  <div class="row">
     <div class="imgBox">
       <img src="" alt="" width="" height="">
     </div>
