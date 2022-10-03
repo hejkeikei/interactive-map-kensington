@@ -15,7 +15,8 @@ if(!$connection){
 <section id="buildingInfo" class="flexbox">
     <!-- please populate this section with database using the format below -->
     <?php
-    $query="SELECT id,name,year,description,location,file,question,opts,answer FROM building WHERE id=1";
+    $id = $_GET['name'];
+    $query="SELECT id,name,year,description,location,file,question,opts,answer FROM building WHERE id=$id";
     $sql=mysqli_query($connection,$query);
     $row=mysqli_fetch_array($sql);
 
@@ -34,7 +35,8 @@ if(!$connection){
     <button id="closeBtn" class="btn">X</button>
     <fieldset>
         <!-- please populate this section with database using the format below -->
-        <legend>What is the name of building?</legend>
+        <legend><?php echo $row['question']; ?></legend>
+
         <input type="radio" name="question" id="A" value="A">
         <label for="A">Answer A</label>
         <input type="radio" name="question" id="B" value="B">
