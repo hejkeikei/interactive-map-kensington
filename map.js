@@ -32,6 +32,9 @@ function createTooltip(x,y,text,index){
  let elemBtn = document.createElement("a");
  let container = document.createElement("div");
  container.classList.add("pa-sm");
+ let closeBtn = document.createElement("button");
+ closeBtn.innerHTML="x";
+ closeBtn.classList="closeBtn";
  let buildingName = document.createElement("h3");
  let desc = document.createElement("p");
  elemBtn.classList.add("btn");
@@ -55,10 +58,29 @@ if(screenwide>600){
     desc.innerHTML="text";
     container.appendChild(buildingName);
     container.appendChild(desc);
+    elem.appendChild(closeBtn);
     elem.appendChild(container);
     elem.appendChild(elemBtn);
     root.appendChild(elem);
 }
+// the tooltips closing button
+let closeBtn = document.querySelectorAll(".closeBtn");
+closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.classList.add("hidden")));
+
+
+// Responsive
+// if screen width > 600px show full map -->> <svg width unset>
+function sizeSvg(){
+    let windWidth =window.innerWidth;
+    var svgViewbox = document.querySelector("svg");
+    if(windWidth>600){
+        svgViewbox.removeAttribute("width");
+    }else{
+        svgViewbox.setAttribute("width",900);
+    }
+}
+sizeSvg();
+window.addEventListener("resize",()=>sizeSvg());
 
 // Responsive
 // if screen width > 600px show full map -->> <svg width unset>
