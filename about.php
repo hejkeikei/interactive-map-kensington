@@ -2,7 +2,7 @@
 include("header.php");
 ?>
 <section id="about">
-  <h2>About us</h2>
+  <h2>About our website</h2>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste
     dolorem necessitatibus dolor aspernatur corporis error. A, voluptates

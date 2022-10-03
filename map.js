@@ -30,6 +30,13 @@ allhover.forEach((elem,index)=>{
 function createTooltip(x,y,text,index){
  let elem = document.createElement("div");
  let elemBtn = document.createElement("a");
+ let container = document.createElement("div");
+ container.classList.add("pa-sm");
+ let closeBtn = document.createElement("button");
+ closeBtn.innerHTML="x";
+ closeBtn.classList="closeBtn";
+ let buildingName = document.createElement("h3");
+ let desc = document.createElement("p");
  elemBtn.classList.add("btn");
  elemBtn.innerHTML="Show More";
  let link = "/building.php?name="+text;
@@ -38,11 +45,41 @@ function createTooltip(x,y,text,index){
  elem.id="building"+index;
  elem.classList.add("tooltip");
  elem.classList.add("hidden");
- elem.style.top=y/2+"px";
- elem.style.left=(x-50)+"px";
- elem.innerHTML=text;
- elem.appendChild(elemBtn);
- root.appendChild(elem);
+
+//  the coordinates are only for desktop
+let screenwide = window.innerWidth;
+if(screenwide>600){
+    elem.style.top=y/2+"px";
+    elem.style.left=(x-50)+"px";
 }
+//  the coordinates are only for desktop
+  
+    buildingName.innerHTML=text;
+    desc.innerHTML="text";
+    container.appendChild(buildingName);
+    container.appendChild(desc);
+    elem.appendChild(closeBtn);
+    elem.appendChild(container);
+    elem.appendChild(elemBtn);
+    root.appendChild(elem);
+}
+// the tooltips closing button
+let closeBtn = document.querySelectorAll(".closeBtn");
+closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.classList.add("hidden")));
+
+
+// Responsive
+// if screen width > 600px show full map -->> <svg width unset>
+function sizeSvg(){
+    let windWidth =window.innerWidth;
+    var svgViewbox = document.querySelector("svg");
+    if(windWidth>600){
+        svgViewbox.removeAttribute("width");
+    }else{
+        svgViewbox.setAttribute("width",900);
+    }
+}
+sizeSvg();
+window.addEventListener("resize",()=>sizeSvg());
 
 

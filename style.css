@@ -4,8 +4,13 @@
 }
 :root{
     --white : #fff;
-    --theme: #56e6e5;
     --dark: #000;
+    /* Header/Footer */
+    --theme: #92C0DE;
+    /* Border/Info Button */
+    --btn: #617F93;
+    /* Nav Button */
+    --navbtn:#414F5D;
 }
 html,body{
     padding: 0;
@@ -16,15 +21,32 @@ html,body{
 h1,h2,h3,h4,h5,h6,header,footer{
     text-align: center;
 }
+header,footer{
+    background-color: var(--theme);
+    color: var(--white);
+}
+footer{
+    min-height: 20vh;
+}
 main{
     position: relative;
     min-height: 75vh;
 }
 section{
-    width: 100%;
+    /* width: 100%; */
     max-width: 80ch;
     margin: 0 auto;
     padding: 1rem;
+}
+nav{
+    display:none !important;
+}
+a{
+    text-decoration: none;
+}
+nav a{
+    background-color: var(--navbtn) !important;
+    margin-bottom: 1rem;
 }
 path{
     position: relative;
@@ -44,20 +66,22 @@ path{
 }
 .tooltip{
     background-color:var(--white);
-    width: 8rem;
-    height: 4rem;
-    padding: 1rem;
+    outline: solid 5px var(--btn);
+    width: 80%;
     position: absolute;
-    top:0;
+    top:50%;
     left: 50%;
+    transform: translate(-50%,-50%);
 }
 .btn{
-    background-color: var(--theme);
+    background-color: var(--btn);
     color: var(--white);
     display: block;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+    padding: 1rem;
+    
 }
 
 
@@ -65,10 +89,13 @@ path{
 .hidden{
     display: none;
 }
-/* .row{
+.pa-sm{
+    padding: .5rem;
+}
+.row{
     display: flex;
     justify-content: space-between;
-} */
+}
 /* responsive flexbox */
 .flexbox{
     display: flex;
@@ -88,6 +115,9 @@ path{
     overflow: scroll;
     /* height: 80vh; */
 }
+#map svg{
+    width: 800;
+}
 #locateContainer{
     position: relative;
 }
@@ -95,20 +125,28 @@ path{
     position: absolute;
     top:50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%); */
     background-color: var(--white);
+}
+#about,#pointcard{
+    outline: solid 5px var(--navbtn);
+    margin: 1.5rem 1.5rem;
 }
 
 /* Pointcard page */
-#pointcard {
-    padding: 2rem;
+/* #pointcard {
+    padding: .5rem;
+} */
+#pointcard .wrap{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    grid-row-gap: 2rem;
+    gap: .5rem;
+    background-color: var(--navbtn);
+    padding: .5rem;
 }
 
-#pointcard div {
+#pointcard .stampe,#pointcard .space {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -125,10 +163,33 @@ path{
 
 /* media query */
 @media screen and (min-width:600px) {
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+    nav a{
+        margin-inline: 1rem;
+        margin-bottom: 0;
+    }
     .flexbox{
+        display: flex !important;
         flex-direction: row;
     }
-    #pointcard {
+    #pointcard .wrap {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    #map svg{
+        width: unset;
+    }
+    .tooltip{
+        padding: .2rem;
+        max-width: 20ch;
+        top:0;
+        left: 50%;
+    }
+}
+@media screen and (min-width:765px){
+    #about,#pointcard{
+        margin: 1.5rem auto;
     }
 }

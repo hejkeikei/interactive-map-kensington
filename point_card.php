@@ -7,24 +7,22 @@ setcookie('point', $point, strtotime("+1 year"));
 
 ?>
 <h2>Your Points</h2>
-<section id="pointcard">
-    <?php
-    //stamp
-    for ($i = 1; $i <= $point; $i++) {
-        echo '<div class="stampe"></div>';
-    }
-    //space
-    for ($i = 1; $i <= 10 - $point; $i++) {
-        echo '<div class="space"></div>';
-    }
+<section id="pointcard" class="pa-sm">
+    <div class="wrap">
 
-    ?>
+        <?php
+        //stamp
+        for ($i = 1; $i <= $point; $i++) {
+            echo '<div class="stampe"></div>';
+        }
+        //space
+        for ($i = 1; $i <= 10 - $point; $i++) {
+            echo '<div class="space"></div>';
+        }
+
+        ?>
+    </div>
 </section>
-
-
-
-<h2>Your Points</h2>
-
 <!-- render a coffee coupon here if meet the criteria -->
 <section id="coupon">
 
