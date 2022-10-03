@@ -1,9 +1,7 @@
 <?php
-
-$point = 6;
-
+ob_start();
+$point=6;
 include("header.php");
-
 // $point= $_COOKIE['point']; 
 setcookie('point', $point, strtotime("+1 year"));
 
@@ -23,6 +21,10 @@ setcookie('point', $point, strtotime("+1 year"));
     ?>
 </section>
 
+
+
+<h2>Your Points</h2>
+
 <!-- render a coffee coupon here if meet the criteria -->
 <section id="coupon">
 
@@ -38,3 +40,4 @@ include("footer.php");
 </body>
 
 </html>
+<?php ob_end_flush(); ?>
