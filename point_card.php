@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$point=6;
+$point = 6;
 include("header.php");
 // $point= $_COOKIE['point']; 
 setcookie('point', $point, strtotime("+1 year"));

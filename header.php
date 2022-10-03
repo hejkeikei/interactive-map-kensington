@@ -12,10 +12,10 @@
 <body>
     <header>
         <h1><img src="" alt="logo" /></h1>
-        <nav>
-            <a href="about.php">About</a>
-            <a href="index.php">Map</a>
-            <a href="point_card.php">Pointcard</a>
+        <nav class="flexbox">
+            <a href="about.php" class="btn">About</a>
+            <a href="index.php" class="btn">Map</a>
+            <a href="point_card.php" class="btn">Pointcard</a>
         </nav>
     </header>
     <main>
