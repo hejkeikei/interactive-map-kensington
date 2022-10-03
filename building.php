@@ -24,9 +24,11 @@ if(!$connection){
     <div class="imgBox"><img src="" alt="" width="" height=""></div>
     <div class="group">
         <a href="index.php" id="backBtn">Back to map</a>
+
         <h2><?php echo $row['name'];?></h2>
         <p><?php echo $row['location'];?></p>
         <p><?php echo $row['description'];?></p>  
+
         <button id="showQ" class="btn">Challange</button>
     </div>
     <!-- please populate this section with database using the format above -->
@@ -37,7 +39,6 @@ if(!$connection){
         <!-- please populate this section with database using the format below -->
         <legend><?php echo $row['question']; ?></legend>
 <?php
- 
             $row['opts'];
             $opts=explode('~',$row['opts']);
             echo $opts[0];

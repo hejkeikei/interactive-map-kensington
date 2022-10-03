@@ -1,10 +1,11 @@
 <?php
 include("header.php");
 ?>
-<div id="map">
-  <!-- tempoary SVG element ***just for testing*** -->
-  <?php include("svg_map.php"); ?>
-</div>
+<section>
+  <div id="map">
+    <?php include("svg_map.php"); ?>
+  </div>
+</section>
 
 
 </main>

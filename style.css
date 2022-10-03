@@ -4,16 +4,26 @@
 }
 :root{
     --white : #fff;
-    --theme: #56e6e5;
+    --dark: #000;
+    /* Header/Footer */
+    --theme: #92C0DE;
+    /* Border/Info Button */
+    --btn: #617F93;
+    /* Nav Button */
+    --navbtn:#414F5D;
 }
 html,body{
     padding: 0;
     margin: 0;
     /* tempoary font */
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif
 }
-header{
+h1,h2,h3,h4,h5,h6,header,footer{
     text-align: center;
+}
+header,footer{
+    background-color: var(--theme);
+    color: var(--white);
 }
 main{
     position: relative;
@@ -25,63 +35,61 @@ section{
     margin: 0 auto;
     padding: 1rem;
 }
+a{
+    text-decoration: none;
+}
+nav a{
+    background-color: var(--navbtn) !important;
+    margin-bottom: 1rem;
+}
 path{
     position: relative;
 }
 .pin:hover{
     /* Testing purpose */
-    fill: red;
-    cursor: pointer;
+    fill: var(--theme);
+    cursor: pointer;   
 }
+
+/* Reusable components */
 .imgBox{
     max-width: 100ch;
     /* temp sizing */
     width: 100%;
     height: 10rem;
 }
-#map{
-    max-width: 150ch;
-    margin: 0 auto;
-    overflow: scroll;
-    /* height: 80vh; */
-}
-/* svg{
-    scale: 3;
-} */
-#locateContainer{
-    position: relative;
-}
-#question{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: var(--white);
-}
 .tooltip{
     background-color:var(--white);
-    width: 8rem;
-    height: 4rem;
-    padding: 1rem;
+    outline: solid 5px var(--btn);
+    width: 80%;
     position: absolute;
-    top:0;
+    bottom:1rem;
     left: 50%;
+    transform: translate(-50%,-50%);
 }
 .btn{
-    background-color: var(--theme);
+    background-color: var(--btn);
     color: var(--white);
     display: block;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+    padding: 1rem;
+    
+}
+
+
+/* Display and layout */
+.hidden{
+    display: none;
+}
+.pa-sm{
+    padding: .5rem;
 }
 /* .row{
     display: flex;
     justify-content: space-between;
 } */
-.hidden{
-    display: none;
-}
 /* responsive flexbox */
 .flexbox{
     display: flex;
@@ -91,6 +99,28 @@ path{
 /* Building info detials */
 #buildingInfo{
     display: flex;
+}
+
+/* Specific secitons & IDs*/
+
+#map{
+    max-width: 150ch;
+    margin: 0 auto;
+    overflow: scroll;
+    /* height: 80vh; */
+}
+#map svg{
+    width: 800;
+}
+#locateContainer{
+    position: relative;
+}
+#question{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--white);
 }
 
 /* Pointcard page */
@@ -103,8 +133,8 @@ path{
 }
 
 #pointcard div {
-    width: 15vw;
-    height: 15vw;
+    width: 5rem;
+    height: 5rem;
     border-radius: 50%;
 
 }
@@ -116,12 +146,27 @@ path{
     background-color: brown;
 }
 
+
 /* media query */
 @media screen and (min-width:600px) {
+    nav{
+        justify-content: center;
+    }
+    nav a{
+        margin-inline: 1rem;
+        margin-bottom: 0;
+    }
     .flexbox{
         flex-direction: row;
     }
     #pointcard {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    #map svg{
+        width: unset;
+    }
+    .tooltip{
+        top:0;
+        left: 50%;
     }
 }
