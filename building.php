@@ -36,11 +36,17 @@ if(!$connection){
     <fieldset>
         <!-- please populate this section with database using the format below -->
         <legend><?php echo $row['question']; ?></legend>
-
+<?php
+ 
+            $row['opts'];
+            $opts=explode('~',$row['opts']);
+            echo $opts[0];
+?> 
+<!-- should use loop generate the opts -->
         <input type="radio" name="question" id="A" value="A">
-        <label for="A">Answer A</label>
+        <label for="A"><?php echo $opts[0];?></label>
         <input type="radio" name="question" id="B" value="B">
-        <label for="B">Answer B</label>
+        <label for="B"><?php echo $opts[1];?></label>
         <input type="radio" name="question" id="C" value="C">
         <label for="C">Answer C</label>
         <input type="submit" value="Answer" class="btn">
