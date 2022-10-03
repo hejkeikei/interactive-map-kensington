@@ -82,4 +82,7 @@ function sizeSvg(){
 sizeSvg();
 window.addEventListener("resize",()=>sizeSvg());
 
+// Responsive
+// if screen width > 600px show full map -->> <svg width unset>
+
 
