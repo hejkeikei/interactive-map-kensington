@@ -5,6 +5,7 @@ include("header.php");
     <!-- please populate this section with database using the format below -->
     <div class="imgBox"><img src="" alt="" width="" height=""></div>
     <div class="group">
+        <a href="index.php" id="backBtn">Back to map</a>
         <h2>building A</h2>
         <p>Address:</p>
         <p>Description:</p>
@@ -14,9 +15,9 @@ include("header.php");
     <!-- please populate this section with database using the format above -->
 </section>
 <section id="question" class="hidden">
-    <button id="closeBtn">X</button>
-    <!-- please populate this section with database using the format below -->
+    <button id="closeBtn" class="btn">X</button>
     <fieldset>
+        <!-- please populate this section with database using the format below -->
         <legend>What is the name of building?</legend>
         <input type="radio" name="question" id="A" value="A">
         <label for="A">Answer A</label>
@@ -25,8 +26,8 @@ include("header.php");
         <input type="radio" name="question" id="C" value="C">
         <label for="C">Answer C</label>
         <input type="submit" value="Answer" class="btn">
+        <!-- please populate this section with database using the format above -->
     </fieldset>
-    <!-- please populate this section with database using the format above -->
 </section>
 </main>
 <?php
