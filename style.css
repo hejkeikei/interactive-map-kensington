@@ -43,6 +43,10 @@ section{
 
 nav{
     display:none !important;
+    position:absolute;
+    z-index: 2;
+    background-color: var(--theme);
+    height: 80vh;
 }
 
 a{
@@ -60,7 +64,10 @@ path{
     fill: var(--theme);
     cursor: pointer;   
 }
-
+h1 img{
+    width: 3rem;
+    height: 3rem;
+}
 /* Reusable components */
 .imgBox{
     max-width: 100ch;
@@ -136,6 +143,9 @@ path{
     background-color: var(--white);
     padding: 0;
     outline: solid 5px var(--navbtn);
+    width: clamp(50ch,80vw,120ch);
+    padding: 0;
+    outline: solid 5px var(--navbtn);
 }
 
 #about,#pointcard{
@@ -174,9 +184,12 @@ path{
 /* media query */
 @media screen and (min-width:600px) {
     nav{
-
+        position: static;
         display: flex;
         justify-content: center;
+        z-index: unset;
+    /* background-color: var(--theme); */
+    height: unset;
     }
     nav a{
         margin-inline: 1rem;

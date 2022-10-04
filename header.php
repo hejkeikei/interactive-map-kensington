@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <h1><img src="" alt="logo" /></h1>
+        <h1><img src="images/K_logo.png" alt="logo" />Intersting Buildings in Kensington</h1>
         <nav class="flexbox">
             <a href="about.php" class="btn">About</a>
             <a href="index.php" class="btn">Map</a>
