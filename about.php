@@ -2,7 +2,7 @@
 include("header.php");
 ?>
 <section id="about">
-  <h2>About us</h2>
+  <h2>About our website</h2>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste
     dolorem necessitatibus dolor aspernatur corporis error. A, voluptates
@@ -17,10 +17,7 @@ include("header.php");
     ratione, facilis repellendus alias, ipsa dolore, expedita molestiae?
     Minima, eos quia sequi deleniti ipsum amet vero.
   </p>
-  <div class="flexbox">
-    <div class="imgBox">
-      <img src="" alt="" width="" height="">
-    </div>
+  <div class="row">
     <div class="imgBox">
       <img src="" alt="" width="" height="">
     </div>

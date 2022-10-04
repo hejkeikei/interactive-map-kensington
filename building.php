@@ -2,12 +2,12 @@
 include("header.php");
 
 $server = "localhost";
-$database="jkuo_kensingtonMap";
-$user="jkuo_kensingtonMapAdmin";
-$pass="JchhyaNK+Wcq";
-$connection = mysqli_connect($server,$user,$pass,$database); 
+$database = "jkuo_kensingtonMap";
+$user = "jkuo_kensingtonMapAdmin";
+$pass = "JchhyaNK+Wcq";
+$connection = mysqli_connect($server, $user, $pass, $database);
 
-if(!$connection){
+if (!$connection) {
     die(mysqli_connect_error());
 }
 
@@ -16,18 +16,18 @@ if(!$connection){
     <!-- please populate this section with database using the format below -->
     <?php
     $id = $_GET['name'];
-    $query="SELECT id,name,year,description,location,file,question,opts,answer FROM building WHERE id=$id";
-    $sql=mysqli_query($connection,$query);
-    $row=mysqli_fetch_array($sql);
+    $query = "SELECT id,name,year,description,location,file,question,opts,answer FROM building WHERE id=$id";
+    $sql = mysqli_query($connection, $query);
+    $row = mysqli_fetch_array($sql);
 
     ?>
     <div class="imgBox"><img src="" alt="" width="" height=""></div>
     <div class="group">
         <a href="index.php" id="backBtn">Back to map</a>
 
-        <h2><?php echo $row['name'];?></h2>
-        <p><?php echo $row['location'];?></p>
-        <p><?php echo $row['description'];?></p>  
+        <h2><?php echo $row['name']; ?></h2>
+        <p><?php echo $row['location']; ?></p>
+        <p><?php echo $row['description']; ?></p>
 
         <button id="showQ" class="btn">Challange</button>
     </div>
@@ -38,6 +38,7 @@ if(!$connection){
     <fieldset>
         <!-- please populate this section with database using the format below -->
         <legend><?php echo $row['question']; ?></legend>
+
 <?php
         $row['opts'];
         $opts=explode('~',$row['opts']);
@@ -48,6 +49,7 @@ if(!$connection){
 
         }
 ?> 
+
         <!-- please populate this section with database using the format above -->
         <button>Send</button>
     </fieldset>
