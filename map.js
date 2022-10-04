@@ -1,13 +1,13 @@
 // Map and tooltip
 const allhover = document.querySelectorAll(".pin");
 const root = document.getElementById("map");
-
+console.log(namelist);
 allhover.forEach((elem,index)=>{
     // console.log(elem.getBoundingClientRect());
     let locate = elem.getBoundingClientRect();
     let x = locate.x;
     let y = locate.y;
-    let addname = "test "+index;
+    let addname = namelist[index];
     var ids = "building"+index;
     
     createTooltip(x,y,addname,index);
@@ -86,5 +86,6 @@ window.addEventListener("resize",()=>sizeSvg());
 
 // Responsive
 // if screen width > 600px show full map -->> <svg width unset>
+
 
 

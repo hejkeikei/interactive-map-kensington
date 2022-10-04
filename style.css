@@ -118,7 +118,7 @@ h1 img{
     display: flex;
 }
 #buildingInfo .imgBox{
-    width: 50%;
+    width: 100%;
 }
 
 /* Specific secitons & IDs*/
@@ -143,7 +143,7 @@ h1 img{
     background-color: var(--white);
     padding: 0;
     outline: solid 5px var(--navbtn);
-    width: clamp(50ch,80vw,120ch);
+    width: clamp(35ch,80vw,120ch);
     padding: 0;
     outline: solid 5px var(--navbtn);
 }
@@ -177,7 +177,8 @@ h1 img{
     background-color: var(--white);
 }
 .stampe {
-    background-color: brown;
+    background-image: url(images/K_logo.png);
+    background-size: cover;
 }
 
 
@@ -211,6 +212,9 @@ h1 img{
 
         top:0;
         left: 50%;
+    }
+    #buildingInfo .imgBox{
+        width: 50%;
     }
 }
 

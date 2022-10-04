@@ -22,31 +22,20 @@ $sql = mysqli_query($connection, $query);
 </main>
 <?php
 include("footer.php");
-?>
-<script src="map.js"></script>
-<?php
-while ($row = mysqli_fetch_array($sql)) {
-  echo  '"' . $row['name'] . '"';
-  if (array_search($row['name'], $row) == count($row) - 1) {
-    break;
-  } else {
-    echo array_search($row['name'], $row);
-    echo count($row) - 1;
-  }
-  echo  ",";
-};
 echo '<script>';
 echo 'const namelist = [';
 while ($row = mysqli_fetch_array($sql)) {
-  echo  '"' . $row['name'] . '"';
-  if (array_search($row['name'], $row) == count($row) - 1) {
+  if ($row['id'] == 10) {
     break;
+  } else {
+    echo  '"' . $row['name'] . '"';
+    echo  ",";
   }
-  echo  ",";
 };
 echo ']';
 echo '</script>';
 ?>
+<script src="map.js"></script>
 </body>
 
 </html>

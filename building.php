@@ -39,19 +39,18 @@ if (!$connection) {
         <!-- please populate this section with database using the format below -->
         <legend><?php echo $row['question']; ?></legend>
 
-<?php
+        <?php
         $row['opts'];
-        $opts=explode('~',$row['opts']);
-        $optsTitle=['A','B','C'];
-        for($i=0;$i<3;$i++){
-        echo '<input type="radio" name="question" id="'.$optsTitle[$i].'" value="'.$optsTitle[$i].'">';
-        echo '<label for="'.$optsTitle[$i].'">'.$opts[$i].'</label>';
-
+        $opts = explode('~', $row['opts']);
+        $optsTitle = ['A', 'B', 'C'];
+        for ($i = 0; $i < 3; $i++) {
+            echo '<input type="radio" name="question" id="' . $optsTitle[$i] . '" value="' . $optsTitle[$i] . '">';
+            echo '<label for="' . $optsTitle[$i] . '">' . $opts[$i] . '</label>';
         }
-?> 
+        ?>
 
         <!-- please populate this section with database using the format above -->
-        <button>Send</button>
+        <button class="btn">Send</button>
     </fieldset>
 </section>
 </main>
