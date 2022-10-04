@@ -9,6 +9,7 @@ allhover.forEach((elem,index)=>{
     let y = locate.y;
     let addname = "test "+index;
     var ids = "building"+index;
+    
     createTooltip(x,y,addname,index);
     // show corresponding tooltip and hide the others
     elem.addEventListener("click",()=>{
@@ -39,7 +40,8 @@ function createTooltip(x,y,text,index){
  let desc = document.createElement("p");
  elemBtn.classList.add("btn");
  elemBtn.innerHTML="Show More";
- let link = "/building.php?name="+text;
+ var linkVar =index+1;
+ let link = "./building.php?name="+linkVar;
  elemBtn.setAttribute("href",link);
 //  console.log(elemBtn);
  elem.id="building"+index;

@@ -117,6 +117,9 @@ h1 img{
 #buildingInfo{
     display: flex;
 }
+#buildingInfo .imgBox{
+    width: 50%;
+}
 
 /* Specific secitons & IDs*/
 
@@ -136,14 +139,13 @@ h1 img{
     position: absolute;
     top:50%;
     left: 50%;
-    /* transform: translate(-50%,-50%); */
+    transform: translate(-50%,-50%);
     background-color: var(--white);
-<<<<<<< Updated upstream
-=======
     padding: 0;
     outline: solid 5px var(--navbtn);
     width: clamp(50ch,80vw,120ch);
->>>>>>> Stashed changes
+    padding: 0;
+    outline: solid 5px var(--navbtn);
 }
 
 #about,#pointcard{
