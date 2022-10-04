@@ -110,6 +110,9 @@ path{
 #buildingInfo{
     display: flex;
 }
+#buildingInfo .imgBox{
+    width: 50%;
+}
 
 /* Specific secitons & IDs*/
 
@@ -129,8 +132,10 @@ path{
     position: absolute;
     top:50%;
     left: 50%;
-    /* transform: translate(-50%,-50%); */
+    transform: translate(-50%,-50%);
     background-color: var(--white);
+    padding: 0;
+    outline: solid 5px var(--navbtn);
 }
 
 #about,#pointcard{
