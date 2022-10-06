@@ -21,7 +21,7 @@ if (!$connection) {
     $row = mysqli_fetch_array($sql);
 
     ?>
-    <div class="imgBox"><img src="" alt="" width="" height=""></div>
+    <div class="imgBox"><img src="images/<?php echo $row['file']; ?>" alt="<?php echo $row['name']; ?>" width="" height=""></div>
     <div class="group">
         <a href="index.php" id="backBtn">Back to map</a>
 
@@ -29,7 +29,7 @@ if (!$connection) {
         <p><?php echo $row['location']; ?></p>
         <p><?php echo $row['description']; ?></p>
 
-        <button id="showQ" class="btn">Challange</button>
+        <button id="showQ" class="btn full">Question</button>
     </div>
     <!-- please populate this section with database using the format above -->
 </section>
@@ -50,7 +50,7 @@ if (!$connection) {
         ?>
 
         <!-- please populate this section with database using the format above -->
-        <button class="btn">Send</button>
+        <button class="btn full">Send</button>
     </fieldset>
 </section>
 </main>

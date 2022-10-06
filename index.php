@@ -12,7 +12,7 @@ if (!$connection) {
 $query = "SELECT id,name,year,description,location,file,question,opts,answer FROM building";
 $sql = mysqli_query($connection, $query);
 ?>
-<section>
+<section id="mapbox">
   <div id="map">
     <?php include("svg_map.php"); ?>
   </div>
@@ -26,13 +26,22 @@ echo '<script>';
 echo 'const namelist = [';
 while ($row = mysqli_fetch_array($sql)) {
   if ($row['id'] == 10) {
-    break;
-  } else {
+    echo "[";
     echo  '"' . $row['name'] . '"';
     echo  ",";
+    echo  '"' . $row['location'] . '"';
+    echo "]";
+    break;
+  } else {
+    echo "[";
+    echo  '"' . $row['name'] . '"';
+    echo  ",";
+    echo  '"' . $row['location'] . '"';
+    echo "]";
+    echo ",";
   }
 };
-echo ']';
+echo '];';
 echo '</script>';
 ?>
 <script src="map.js"></script>

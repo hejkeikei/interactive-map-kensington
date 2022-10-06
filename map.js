@@ -56,8 +56,8 @@ if(screenwide>600){
 }
 //  the coordinates are only for desktop
   
-    buildingName.innerHTML=text;
-    desc.innerHTML="text";
+    buildingName.innerHTML=text[0];
+    desc.innerHTML=text[1];
     container.appendChild(buildingName);
     container.appendChild(desc);
     elem.appendChild(closeBtn);
