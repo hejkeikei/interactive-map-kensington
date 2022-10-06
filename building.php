@@ -43,14 +43,14 @@ if (!$connection) {
         $row['opts'];
         $opts = explode('~', $row['opts']);
         $optsTitle = ['A', 'B', 'C'];
-        for ($i = 0; $i < 3; $i++) {
+        for ($i = 0; $i < count($opts); $i++) {
             echo '<input type="radio" name="question" id="' . $optsTitle[$i] . '" value="' . $optsTitle[$i] . '">';
             echo '<label for="' . $optsTitle[$i] . '">' . $opts[$i] . '</label>';
         }
         ?>
 
         <!-- please populate this section with database using the format above -->
-        <button class="btn full">Send</button>
+        <button class="btn full" id="send">Send</button>
     </fieldset>
 </section>
 </main>
@@ -61,7 +61,19 @@ include("footer.php");
 <script>
     <?php
     // this variable is for compare anwser 
-        echo "var answer =".$row['answer'].";";
+    echo "var answer =" . $row['answer'] . ";";
+    // when user click "send" button{
+    //     var userInput = get radio button value(A,B or C)
+    //     compare var answer(A,B or C) and var userInput(A,B or C)
+    //     if(answer===userInput){
+    //         getcookie points
+    //         point + 1
+    //         display message "Point add 1"
+    //     }else{
+    //         display message "Wrong guess again"
+    //     }
+    // }
+
 
     ?>
 </script>
