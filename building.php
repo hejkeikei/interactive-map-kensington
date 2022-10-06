@@ -58,6 +58,13 @@ if (!$connection) {
 include("footer.php");
 ?>
 <script src="building_info.js"></script>
+<script>
+    <?php
+    // this variable is for compare anwser 
+        echo "var answer =".$row['answer'].";";
+
+    ?>
+</script>
 </body>
 
 </html>
