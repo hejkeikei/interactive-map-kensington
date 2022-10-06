@@ -44,7 +44,7 @@ if (!$connection) {
         $opts = explode('~', $row['opts']);
         $optsTitle = ['A', 'B', 'C'];
         for ($i = 0; $i < count($opts); $i++) {
-            echo '<input type="radio" name="question" id="' . $optsTitle[$i] . '" value="' . $optsTitle[$i] . '">';
+            echo '<input type="radio" name="option" id="' . $optsTitle[$i] . '" value="' . $optsTitle[$i] . '">';
             echo '<label for="' . $optsTitle[$i] . '">' . $opts[$i] . '</label>';
         }
         ?>
@@ -61,21 +61,34 @@ include("footer.php");
 <script>
     <?php
     // this variable is for compare anwser 
-    echo "var answer =" . $row['answer'] . ";";
-    // when user click "send" button{
+    echo "var answer ='" . $row['answer'] . "';";
+    ?>
+     //use loop to get radio value
+     //var userInput = 
+    // when (if)user click "send" button{
+
+        send.addEventListener('click',function(){
+            var userInput = document.querySelector(input[name=option]:checked).value;
+            console.log(userInput);
+           
+        })
     //     var userInput = get radio button value(A,B or C)
     //     compare var answer(A,B or C) and var userInput(A,B or C)
     //     if(answer===userInput){
-    //         getcookie points
-    //         point + 1
-    //         display message "Point add 1"
+    //            if(isset cookie){
+    //                    getcookie points
+    //                     point + 1
+    //                     display message "Point add 1"
+    //                  }else{
+    //                        set cookie
+    //                   }
     //     }else{
     //         display message "Wrong guess again"
     //     }
     // }
 
 
-    ?>
+    
 </script>
 </body>
 
