@@ -21,7 +21,7 @@ if (!$connection) {
     $row = mysqli_fetch_array($sql);
 
     ?>
-    <div class="imgBox"><img src="" alt="" width="" height=""></div>
+    <div class="imgBox"><img src="images/<?php echo $row['file']; ?>" alt="<?php echo $row['name']; ?>" width="" height=""></div>
     <div class="group">
         <a href="index.php" id="backBtn">Back to map</a>
 
@@ -29,7 +29,7 @@ if (!$connection) {
         <p><?php echo $row['location']; ?></p>
         <p><?php echo $row['description']; ?></p>
 
-        <button id="showQ" class="btn">Challange</button>
+        <button id="showQ" class="btn full">Question</button>
     </div>
     <!-- please populate this section with database using the format above -->
 </section>
@@ -39,19 +39,18 @@ if (!$connection) {
         <!-- please populate this section with database using the format below -->
         <legend><?php echo $row['question']; ?></legend>
 
-<?php
+        <?php
         $row['opts'];
-        $opts=explode('~',$row['opts']);
-        $optsTitle=['A','B','C'];
-        for($i=0;$i<3;$i++){
-        echo '<input type="radio" name="question" id="'.$optsTitle[$i].'" value="'.$optsTitle[$i].'">';
-        echo '<label for="'.$optsTitle[$i].'">'.$opts[$i].'</label>';
-
+        $opts = explode('~', $row['opts']);
+        $optsTitle = ['A', 'B', 'C'];
+        for ($i = 0; $i < count($opts); $i++) {
+            echo '<input type="radio" name="option" id="' . $optsTitle[$i] . '" value="' . $optsTitle[$i] . '">';
+            echo '<label for="' . $optsTitle[$i] . '">' . $opts[$i] . '</label>';
         }
-?> 
+        ?>
 
         <!-- please populate this section with database using the format above -->
-        <button>Send</button>
+        <button class="btn full" id="send">Send</button>
     </fieldset>
 </section>
 </main>
@@ -62,10 +61,67 @@ include("footer.php");
 <script>
     <?php
     // this variable is for compare anwser 
-        echo "var answer =".$row['answer'].";";
-
+    echo "var answer ='" . $row['answer'] . "';";
     ?>
+    //use loop to get radio value
+    //var userInput = 
+    // when (if)user click "send" button{
+
+    send.addEventListener('click', function() {
+        // var userInput = get radio button value(A,B or C)
+        var userInput = document.querySelector('input[name=option]:checked').value;
+        console.log(userInput);
+        console.log(answer);
+        let points = document.cookie;
+        console.log(points);
+        var actualPoints = parseInt(points.split('=')[1]);//conver
+        // console.log("points splits: ", actualPoints);
+        if (userInput === answer) {
+            console.log("Correct Answer!!")
+            console.log("type: ", typeof points); // string,should be number
+            //need set another cookie in here for remember user come before,then show you 
+
+            if (points !== "") {
+                actualPoints++;
+                console.log("Add 1 point.");
+                console.log("Your total point is " + actualPoints);
+                // if point is less than 10, set a update cookie, 
+                    if(actualPoints<=9){
+                        document.cookie = "points=" + actualPoints + "; expires= 1 year;";
+                    }
+                
+            } else {
+                //if there no cookie, set cookie for point
+                console.log("else ", actualPoints);
+                actualPoints = 0
+                document.cookie = "points=1; expires= 1 year;";
+                console.log(points);
+            }
+
+        } else { 
+            console.log("Sorry! You got the worng answer, Please try again.")
+        }
+
+
+    })
+
+
+    //     
+    //     compare var answer(A,B or C) and var userInput(A,B or C)
+    //     if(answer===userInput){
+    //            if(isset cookie){
+    //                    getcookie points
+    //                     point + 1
+    //                     display message "Point add 1"
+    //                  }else{
+    //                        set cookie
+    //                   }
+    //     }else{
+    //         display message "Wrong guess again"
+    //     }
+    // }
 </script>
+<script src="building_info.js"></script>
 </body>
 
 </html>
