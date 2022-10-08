@@ -11,11 +11,18 @@
 
 <body>
     <header>
-        <h1><img src="" alt="logo" /></h1>
+        <input type="checkbox" name="toggle" id="toggle">
+        <label for="toggle">
+            <span class="shape"></span>
+            <span class="shape"></span>
+            <span class="shape"></span>
+        </label>
+        <h1>Intersting Buildings in Kensington</h1>
         <nav class="flexbox">
             <a href="about.php" class="btn">About</a>
             <a href="index.php" class="btn">Map</a>
             <a href="point_card.php" class="btn">Pointcard</a>
+            <a href="buildinglist.php" class="btn">All buildings</a>
         </nav>
     </header>
     <main>

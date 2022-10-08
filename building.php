@@ -74,6 +74,7 @@ include("footer.php");
         console.log(answer);
         let points = document.cookie;
         console.log(points);
+
         var actualPoints = parseInt(points.split('=')[1]);//conver
         // console.log("points splits: ", actualPoints);
         if (userInput === answer) {
@@ -103,23 +104,8 @@ include("footer.php");
         }
 
 
-    })
+    });
 
-
-    //     
-    //     compare var answer(A,B or C) and var userInput(A,B or C)
-    //     if(answer===userInput){
-    //            if(isset cookie){
-    //                    getcookie points
-    //                     point + 1
-    //                     display message "Point add 1"
-    //                  }else{
-    //                        set cookie
-    //                   }
-    //     }else{
-    //         display message "Wrong guess again"
-    //     }
-    // }
 </script>
 <script src="building_info.js"></script>
 </body>

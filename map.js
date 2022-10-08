@@ -1,13 +1,13 @@
 // Map and tooltip
 const allhover = document.querySelectorAll(".pin");
 const root = document.getElementById("map");
-
+console.log(namelist);
 allhover.forEach((elem,index)=>{
     // console.log(elem.getBoundingClientRect());
     let locate = elem.getBoundingClientRect();
     let x = locate.x;
     let y = locate.y;
-    let addname = "test "+index;
+    let addname = namelist[index];
     var ids = "building"+index;
     
     createTooltip(x,y,addname,index);
@@ -56,8 +56,8 @@ if(screenwide>600){
 }
 //  the coordinates are only for desktop
   
-    buildingName.innerHTML=text;
-    desc.innerHTML="text";
+    buildingName.innerHTML=text[0];
+    desc.innerHTML=text[1];
     container.appendChild(buildingName);
     container.appendChild(desc);
     elem.appendChild(closeBtn);
@@ -86,5 +86,6 @@ window.addEventListener("resize",()=>sizeSvg());
 
 // Responsive
 // if screen width > 600px show full map -->> <svg width unset>
+
 
 
