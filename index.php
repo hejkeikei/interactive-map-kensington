@@ -14,7 +14,7 @@ $sql = mysqli_query($connection, $query);
 ?>
 <section id="mapbox">
   <div id="map">
-    <?php include("svg_map.php"); ?>
+    <?php include("map_svg.php"); ?>
   </div>
 </section>
 

@@ -1,10 +1,19 @@
 <?php
 ob_start();
-$point = 6;
+// $point = 6;
 include("header.php");
-// $point= $_COOKIE['point']; 
-setcookie('point', $point, strtotime("+1 year"));
-
+$point = $_COOKIE['points'];
+// setcookie('point', $point, strtotime("+1 year"));
+function generateRandomString($length = 6)
+{
+    $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 ?>
 <h2>Your Points</h2>
 <section id="pointcard" class="pa-sm">
@@ -23,24 +32,28 @@ setcookie('point', $point, strtotime("+1 year"));
 </section>
 <!-- render a coffee coupon here if meet the criteria -->
 <section id="coupon">
-    <?php
-    $pointsNow = $_COOKIE['points'];
-    if (isset($_COOKIE['points'])) {
-    }
-    ?>
     <h2>
         <?php
-        echo $points;
+        echo $point;
         ?>
         /10 points
     </h2>
-    <div id="reward">
-        <h3>Reward: Free Coffee</h3>
-        <p>Use this promo code at Jitters to redeem your free coffee!</p>
-        <p id="promocode">
-
-        </p>
-    </div>
+    <?php
+    $pointsNow = $_COOKIE['points'];
+    if (isset($_COOKIE['points'])) {
+        echo '<div id="reward">';
+        if ($pointsNow == 10) {
+            echo '<h3>Reward: Free Coffee</h3>
+                <p>Use this promo code at Jitters to redeem your free coffee!</p>
+                <p id="promocode">';
+            echo generateRandomString();
+            echo '</p>';
+        } else {
+            echo '<h3>Collect 10 points to get a reward!</h3>';
+        };
+        echo '</div>';
+    }
+    ?>
 </section>
 
 </main>
