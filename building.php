@@ -59,20 +59,46 @@ include("footer.php");
 ?>
 <script src="building_info.js"></script>
 <script>
-    <?php
+<?php
     // this variable is for compare anwser 
     echo "var answer ='" . $row['answer'] . "';";
-    ?>
+?>
      //use loop to get radio value
      //var userInput = 
     // when (if)user click "send" button{
 
         send.addEventListener('click',function(){
-            var userInput = document.querySelector(input[name=option]:checked).value;
+           // var userInput = get radio button value(A,B or C)
+            var userInput = document.querySelector('input[name=option]:checked').value;
             console.log(userInput);
+            console.log(answer);
+            let points = document.cookie;
+            let actualPoints = points.split('=')[1];
+            
+        if(userInput===answer){
+            console.log("Correct Answer!!")
+            if( typeof points !== 'undefined') { 
+                
+                actualPoints++;
+                console.log("Add 1 point.")
+                console.log("Your total point is "+ actualPoints);
+
+            }else{
+                document.cookie = "point=1; expires= 1 year;";
+                // let points = document.cookie;
+                // let actualPoints = points.split('=')[1];
+                console.log(points);
+            }
+                
+        }else{
+            console.log("Sorry! You got the worng answer, Please try again.")
+          }
+
            
         })
-    //     var userInput = get radio button value(A,B or C)
+        
+        
+    //     
     //     compare var answer(A,B or C) and var userInput(A,B or C)
     //     if(answer===userInput){
     //            if(isset cookie){
@@ -89,6 +115,7 @@ include("footer.php");
 
 
     
+
 </script>
 </body>
 
