@@ -74,49 +74,38 @@ include("footer.php");
         console.log(answer);
         let points = document.cookie;
         console.log(points);
-        var actualPoints = parseInt(points.split('=')[1]);
+
+        var actualPoints = parseInt(points.split('=')[1]);//conver
         // console.log("points splits: ", actualPoints);
         if (userInput === answer) {
             console.log("Correct Answer!!")
-            console.log("type: ", typeof points);
+            console.log("type: ", typeof points); // string,should be number
+            //need set another cookie in here for remember user come before,then show you 
+
             if (points !== "") {
                 actualPoints++;
-                console.log("if");
                 console.log("Add 1 point.");
                 console.log("Your total point is " + actualPoints);
-                // set a update cookie
-                document.cookie = "points=" + actualPoints + "; expires= 1 year;";
+                // if point is less than 10, set a update cookie, 
+                    if(actualPoints<=9){
+                        document.cookie = "points=" + actualPoints + "; expires= 1 year;";
+                    }
+                
             } else {
+                //if there no cookie, set cookie for point
                 console.log("else ", actualPoints);
                 actualPoints = 0
                 document.cookie = "points=1; expires= 1 year;";
-                // let points = document.cookie;
-                // let actualPoints = points.split('=')[1];
                 console.log(points);
             }
 
-        } else {
+        } else { 
             console.log("Sorry! You got the worng answer, Please try again.")
         }
 
 
-    })
+    });
 
-
-    //     
-    //     compare var answer(A,B or C) and var userInput(A,B or C)
-    //     if(answer===userInput){
-    //            if(isset cookie){
-    //                    getcookie points
-    //                     point + 1
-    //                     display message "Point add 1"
-    //                  }else{
-    //                        set cookie
-    //                   }
-    //     }else{
-    //         display message "Wrong guess again"
-    //     }
-    // }
 </script>
 <script src="building_info.js"></script>
 </body>
