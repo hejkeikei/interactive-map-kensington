@@ -17,7 +17,7 @@ $sql = mysqli_query($connection, $query);
     <ol>
         <?php
         while ($row = mysqli_fetch_array($sql)) {
-            echo "<li>" . $row['name'] . "| <a href=building.php?name=" . $row['id'] . ">Jump to info</a></li>";
+            echo "<li>" . $row['name'] . "| <a href='building.php?name=" . $row['id'] . "'>Jump to info</a></li>";
         }
         ?>
     </ol>

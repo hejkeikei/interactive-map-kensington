@@ -12,11 +12,11 @@ if (!$connection) {
 $query = "SELECT id,name,year,description,location,file,question,opts,answer FROM building";
 $sql = mysqli_query($connection, $query);
 ?>
-<section id="mapbox">
+<div id="mapbox">
   <div id="map">
     <?php include("map_svg.php"); ?>
   </div>
-</section>
+</div>
 
 
 </main>
