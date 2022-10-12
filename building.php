@@ -65,7 +65,6 @@ include("footer.php");
 <script src="building_info.js"></script>
 <script>
     <?php
-
     echo "var answer ='" . $row['answer'] . "';";
     echo "var id ='" . $id . "';";
     ?>
