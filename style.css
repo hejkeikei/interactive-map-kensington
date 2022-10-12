@@ -93,9 +93,9 @@ path{
     transform-origin: 50% 50%;
     transition: .3s;
 }
-/* .pin:hover path,.pin:hover rect,.pin:hover polygon{
+.pin:hover path,.pin:hover rect,.pin:hover polygon{
     fill: var(--theme);
-} */
+}
 /* Reusable components */
 .imgBox{
     width: 100%;
