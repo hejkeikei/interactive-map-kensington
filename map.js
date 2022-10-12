@@ -34,7 +34,7 @@ function createTooltip(x,y,text,index){
  let container = document.createElement("div");
  container.classList.add("pa-sm");
  let closeBtn = document.createElement("button");
- closeBtn.innerHTML="x";
+ closeBtn.innerHTML="<i class='fa-solid fa-xmark'></i>";
  closeBtn.classList="closeBtn";
  let buildingName = document.createElement("h3");
  let desc = document.createElement("p");
@@ -67,7 +67,7 @@ if(screenwide>600){
 }
 // the tooltips closing button
 let closeBtn = document.querySelectorAll(".closeBtn");
-closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.classList.add("hidden")));
+closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.parentElement.classList.add("hidden")));
 
 
 // Responsive

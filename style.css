@@ -4,7 +4,7 @@
 }
 *{
     box-sizing: border-box;
-    border: solid 1px black;
+    /* border: solid 1px black; */
 }
 :root{
     --white : #fff;
@@ -47,11 +47,10 @@ main{
     position: relative;
     min-height: 75vh;
 }
-section{
+section,#mapbox,#pointcard{
     /* width: 100%; */
     max-width: 80ch;
     margin: 1rem auto;
-    padding: 1rem;
     outline: solid 5px var(--btn);
     margin: 1rem;
 }
@@ -78,11 +77,25 @@ nav a{
 path{
     position: relative;
 }
-.pin:hover{
-    /* Testing purpose */
-    fill: var(--theme);
-    cursor: pointer;   
+.pin{
+    position: absolute;
+    /* transition: transform 3s; */
+    /* test */
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: .3s;
+    transform-box: fill-box;
 }
+.pin:hover{
+    cursor: pointer;   
+    /* Testing purpose */
+    transform: scale(1.3);
+    transform-origin: 50% 50%;
+    transition: .3s;
+}
+/* .pin:hover path,.pin:hover rect,.pin:hover polygon{
+    fill: var(--theme);
+} */
 /* Reusable components */
 .imgBox{
     width: 100%;
@@ -101,6 +114,12 @@ path{
     left: 50%;
     transform: translate(-50%,-50%);
 }
+.tooltip h3{
+    margin-bottom: .5rem;
+}
+.tooltip p{
+    font-size: x-small;
+}
 .btn{
     background-color: var(--btn);
     color: var(--white);
@@ -109,16 +128,27 @@ path{
     text-decoration: none;
     text-align: center;
     padding: 1rem;
-    
+    border: none;
 }
-
-
+.closeBtn {
+    border: none;
+    background-color: unset;
+    font-size: 2rem;
+    position: absolute;
+    color: var(--btn);
+    margin: .5rem;
+    right: 0;
+    cursor: pointer;
+}
 /* Display and layout */
 .hidden{
     display: none;
 }
 .pa-sm{
     padding: .5rem;
+}
+.pa-m{
+    padding: 1rem;
 }
 .row{
     display: flex;
@@ -144,7 +174,7 @@ path{
 /* Specific secitons & IDs*/
 
 #map{
-    max-width: 150ch;
+    /* max-width: 150ch; */
     margin: 0 auto;
     overflow: scroll;
     /* height: 80vh; */
@@ -168,6 +198,12 @@ path{
     padding: 0;
     outline: solid 5px var(--navbtn);
 }
+#question h3{
+    text-align: left;
+}
+#question .row{
+    justify-content: flex-start;
+}
 
 #about,#pointcard{
     outline: solid 5px var(--navbtn);
@@ -175,12 +211,10 @@ path{
 }
 
 /* Pointcard page */
-/* #pointcard {
-    padding: .5rem;
-} */
+
 #pointcard .wrap{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     justify-items: center;
     gap: .5rem;
     background-color: var(--navbtn);
@@ -188,10 +222,9 @@ path{
 }
 
 #pointcard .stampe,#pointcard .space {
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-
 }
 .space {
     border: 2px dotted grey;
@@ -271,7 +304,6 @@ label[for=toggle] span:nth-last-child(2){
         display: flex;
         justify-content: center;
         z-index: unset;
-        background-color: var(--theme);
         height: unset;
     }
     nav a{
@@ -281,31 +313,45 @@ label[for=toggle] span:nth-last-child(2){
     .flexbox{
         display: flex !important;
         flex-direction: row;
+        gap: 1rem;
     }
-    #pointcard .wrap {
+    /* #pointcard .wrap {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    } */
+    #mapbox{
+        max-width: 90vw !important;
     }
     #map svg{
-        width: unset;
+        width: 90vw;
     }
     .tooltip{
-        padding: .2rem;
-        max-width: 20ch;
-
+        max-width: 30ch;
         top:0;
         left: 50%;
     }
-    #buildingInfo .imgBox{
-        width: 50%;
+    #buildingInfo{
+        padding-bottom: 2rem;
+    }
+    #buildingInfo .group .imgBox{
+        min-width: 40%;
     }
     label[for=toggle]{
         display: none;
     }
+    #showQ{
+        position: absolute;
+        bottom: 0;
+    }
+    #pointcard .stampe,#pointcard .space {
+        width: 5rem;
+        height: 5rem;
+    }
 }
 
 @media screen and (min-width:765px){
-    #about,#pointcard,#mapbox,#buildingInfo{
+    #about,#pointcard,#mapbox,#buildingInfo,#coupon,#buildingList{
         margin: 1.5rem auto;
+        position: relative;
     }
 }
 

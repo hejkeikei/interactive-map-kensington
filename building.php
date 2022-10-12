@@ -21,37 +21,41 @@ if (!$connection) {
     $row = mysqli_fetch_array($sql);
 
     ?>
-    <div class="imgBox"><img src="images/<?php echo $row['file']; ?>" alt="<?php echo $row['name']; ?>" width="" height=""></div>
-    <div class="group">
-        <a href="index.php" id="backBtn">Back to map</a>
+    <div class="group pa-m flexbox">
+        <div class="imgBox"><img src="images/<?php echo $row['file']; ?>" alt="<?php echo $row['name']; ?>" width="" height=""></div>
+        <div class="group">
 
-        <h2><?php echo $row['name']; ?></h2>
-        <p><?php echo $row['location']; ?></p>
-        <p><?php echo $row['description']; ?></p>
+            <a href="index.php" id="backBtn">Back to map</a>
+            <h2><?php echo $row['name']; ?></h2>
+            <p><?php echo $row['location']; ?></p>
+            <p><?php echo $row['description']; ?></p>
+        </div>
 
-        <button id="showQ" class="btn full">Question</button>
     </div>
+    <button id="showQ" class="btn full">Question</button>
     <!-- please populate this section with database using the format above -->
 </section>
 <section id="question" class="hidden">
-    <button id="closeBtn" class="btn">X</button>
-    <fieldset>
+    <button id="closeBtn" class="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+    <div class="group pa-m">
         <!-- please populate this section with database using the format below -->
-        <legend><?php echo $row['question']; ?></legend>
-
-        <?php
-        $row['opts'];
-        $opts = explode('~', $row['opts']);
-        $optsTitle = ['A', 'B', 'C'];
-        for ($i = 0; $i < count($opts); $i++) {
-            echo '<input type="radio" name="option" id="' . $optsTitle[$i] . '" value="' . $optsTitle[$i] . '">';
-            echo '<label for="' . $optsTitle[$i] . '">' . $opts[$i] . '</label>';
-        }
-        ?>
-
-        <!-- please populate this section with database using the format above -->
-        <button class="btn full" id="send">Send</button>
-    </fieldset>
+        <h3><?php echo $row['question']; ?></h3>
+        <div class="flexbox">
+            <?php
+            $row['opts'];
+            $opts = explode('~', $row['opts']);
+            $optsTitle = ['A', 'B', 'C'];
+            for ($i = 0; $i < count($opts); $i++) {
+                echo '<div class="row">';
+                echo '<input type="radio" name="option" id="' . $optsTitle[$i] . '" value="' . $optsTitle[$i] . '">';
+                echo '<label for="' . $optsTitle[$i] . '">' . $opts[$i] . '</label>';
+                echo '</div>';
+            }
+            ?>
+            <!-- please populate this section with database using the format above -->
+        </div>
+    </div>
+    <button class="btn full" id="send">Send</button>
 </section>
 </main>
 <?php
@@ -116,13 +120,7 @@ include("footer.php");
                     //document.cookie = "points=1; expires="+ exday +";"; //not sure I am doing right
                     // console.log(points);
                 }
-
-            }
-                  
-            
-                
-          
-
+            } 
         }else{ 
             console.log("Sorry! You got the worng answer, Please try again.");
         }
@@ -144,6 +142,7 @@ function getCookie(cname) {
   }
   return "";
 }
+
     //     
     //     compare var answer(A,B or C) and var userInput(A,B or C)
     //     if(answer===userInput){
