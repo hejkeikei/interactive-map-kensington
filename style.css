@@ -95,10 +95,6 @@ h1 img{
     padding: 1rem;
     
 }
-<<<<<<< Updated upstream
-
-
-=======
 .msg{
     transition: opacity ease-in-out .5s;
     opacity: 1;
@@ -112,7 +108,6 @@ h1 img{
     justify-content: center;
     align-items: center;
 }
->>>>>>> Stashed changes
 /* Display and layout */
 .hidden{
     display: none;
@@ -239,8 +234,6 @@ h1 img{
         top:0;
         left: 50%;
     }
-<<<<<<< Updated upstream
-=======
     #buildingInfo{
         padding-bottom: 2rem;
     }
@@ -262,7 +255,6 @@ h1 img{
         width: 100%;
         height: auto;
     }
->>>>>>> Stashed changes
 }
 
 @media screen and (min-width:765px){

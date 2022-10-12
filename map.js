@@ -66,13 +66,8 @@ if(screenwide>600){
     root.appendChild(elem);
 }
 // the tooltips closing button
-<<<<<<< Updated upstream
-let closeBtn = document.querySelectorAll(".closeBtn");
-closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.classList.add("hidden")));
-=======
 let closeBtn = document.querySelectorAll(".closeBtn i");
 closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.parentElement.classList.add("hidden")));
->>>>>>> Stashed changes
 
 
 // Responsive

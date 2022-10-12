@@ -12,18 +12,14 @@ if (!$connection) {
 $query = "SELECT id,name,year,description,location,file,question,opts,answer FROM building";
 $sql = mysqli_query($connection, $query);
 ?>
-<section>
+<div>
   <div id="map">
     <?php include("svg_map.php"); ?>
   </div>
-<<<<<<< Updated upstream
-</section>
-=======
 </div>
 <div class="msg flexbox" id="msg">
   <p>Scroll to explore Kensington buildings.</p>
 </div>
->>>>>>> Stashed changes
 
 
 </main>

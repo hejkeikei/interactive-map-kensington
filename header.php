@@ -11,9 +11,6 @@
 
 <body>
     <header>
-<<<<<<< Updated upstream
-        <h1><img src="images/K_logo.png" alt="logo" />Intersting Buildings in Kensington</h1>
-=======
         <input type="checkbox" name="toggle" id="toggle">
         <label for="toggle">
             <span class="shape"></span>
@@ -21,7 +18,6 @@
             <span class="shape"></span>
         </label>
         <h1>Interesting Buildings in Kensington</h1>
->>>>>>> Stashed changes
         <nav class="flexbox">
             <a href="about.php" class="btn">About</a>
             <a href="index.php" class="btn">Map</a>

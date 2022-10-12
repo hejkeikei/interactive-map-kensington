@@ -37,24 +37,6 @@ if (!$connection) {
     <button id="closeBtn" class="btn">X</button>
     <fieldset>
         <!-- please populate this section with database using the format below -->
-<<<<<<< Updated upstream
-        <legend><?php echo $row['question']; ?></legend>
-
-<?php
-        $row['opts'];
-        $opts=explode('~',$row['opts']);
-        $optsTitle=['A','B','C'];
-        for($i=0;$i<3;$i++){
-        echo '<input type="radio" name="question" id="'.$optsTitle[$i].'" value="'.$optsTitle[$i].'">';
-        echo '<label for="'.$optsTitle[$i].'">'.$opts[$i].'</label>';
-
-        }
-?> 
-
-        <!-- please populate this section with database using the format above -->
-        <button>Send</button>
-    </fieldset>
-=======
         <h3><?php echo $row['question']; ?></h3>
         <div class="flexbox">
             <?php
@@ -73,15 +55,12 @@ if (!$connection) {
         <p id="msg" class="hidden">Correct! go to <a href="point_card.php"> your point card</a> to see your points.</p>
     </div>
     <button class="btn full" id="send">Send</button>
->>>>>>> Stashed changes
 </section>
 </main>
 <?php
 include("footer.php");
 ?>
 <script src="building_info.js"></script>
-<<<<<<< Updated upstream
-=======
 <script>
     var msg = document.getElementById("msg");
     <?php
@@ -144,7 +123,6 @@ include("footer.php");
     //     }
     // }
 </script>
->>>>>>> Stashed changes
 </body>
 
 </html>

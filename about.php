@@ -8,10 +8,10 @@ include("header.php");
   </p>
   <div class="row">
     <div class="imgBox">
-      <img src="" alt="" width="" height="">
+      <img src="images/rbc_bank.jpg" alt="" width="" height="">
     </div>
     <div class="imgBox">
-      <img src="" alt="" width="" height="">
+      <img src="images/pixel.jpg" alt="" width="" height="">
     </div>
   </div>
 </section>
