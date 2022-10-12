@@ -16,7 +16,14 @@ $sql = mysqli_query($connection, $query);
   <div id="map">
     <?php include("svg_map.php"); ?>
   </div>
+<<<<<<< Updated upstream
 </section>
+=======
+</div>
+<div class="msg flexbox" id="msg">
+  <p>Scroll to explore Kensington buildings.</p>
+</div>
+>>>>>>> Stashed changes
 
 
 </main>

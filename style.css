@@ -75,6 +75,7 @@ h1 img{
     width: 100%;
     height: 10rem;
 }
+
 .tooltip{
     background-color:var(--white);
     outline: solid 5px var(--btn);
@@ -94,11 +95,28 @@ h1 img{
     padding: 1rem;
     
 }
+<<<<<<< Updated upstream
 
 
+=======
+.msg{
+    transition: opacity ease-in-out .5s;
+    opacity: 1;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+>>>>>>> Stashed changes
 /* Display and layout */
 .hidden{
     display: none;
+    opacity: 0;
 }
 .pa-sm{
     padding: .5rem;
@@ -152,6 +170,10 @@ h1 img{
     outline: solid 5px var(--navbtn);
     margin: 1.5rem 1.5rem;
 }
+#about .imgBox img{
+    height: 100%;
+    width: auto;
+}
 
 /* Pointcard page */
 /* #pointcard {
@@ -178,6 +200,11 @@ h1 img{
 }
 .stampe {
     background-color: brown;
+}
+#promocode{
+    font-size: 2rem;
+    margin: .5rem;
+    font-weight: 900;
 }
 
 
@@ -212,11 +239,39 @@ h1 img{
         top:0;
         left: 50%;
     }
+<<<<<<< Updated upstream
+=======
+    #buildingInfo{
+        padding-bottom: 2rem;
+    }
+    #buildingInfo .group .imgBox{
+        min-width: 40%;
+    }
+    label[for=toggle]{
+        display: none;
+    }
+    #showQ{
+        position: absolute;
+        bottom: 0;
+    }
+    #pointcard .stampe,#pointcard .space {
+        width: 5rem;
+        height: 5rem;
+    }
+    .imgBox img{
+        width: 100%;
+        height: auto;
+    }
+>>>>>>> Stashed changes
 }
 
 @media screen and (min-width:765px){
     #about,#pointcard{
         margin: 1.5rem auto;
     }
+    #map{
+        overflow:hidden;
+    }
 }
+
 

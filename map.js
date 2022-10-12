@@ -66,8 +66,13 @@ if(screenwide>600){
     root.appendChild(elem);
 }
 // the tooltips closing button
+<<<<<<< Updated upstream
 let closeBtn = document.querySelectorAll(".closeBtn");
 closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.classList.add("hidden")));
+=======
+let closeBtn = document.querySelectorAll(".closeBtn i");
+closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.parentElement.classList.add("hidden")));
+>>>>>>> Stashed changes
 
 
 // Responsive
@@ -84,7 +89,11 @@ function sizeSvg(){
 sizeSvg();
 window.addEventListener("resize",()=>sizeSvg());
 
-// Responsive
-// if screen width > 600px show full map -->> <svg width unset>
+// instruciton
+var msg = document.getElementById("msg");
+setTimeout(function(){ msg.style.opacity="0"}, 1500);
+setTimeout(function(){ msg.style.display="none";msg.classList.remove("flexbox");}, 2000);
+
+
 
 
