@@ -1,21 +1,10 @@
 <?php
 include("header.php");
 ?>
-<section id="about">
+<section id="about" class="pa-m">
   <h2>About our website</h2>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos iste
-    dolorem necessitatibus dolor aspernatur corporis error. A, voluptates
-    dolore. Ad assumenda dolorem dignissimos iste architecto. Neque
-    molestias doloremque numquam ratione. Quisquam, architecto veniam
-    dolores voluptates eaque vitae ducimus esse rerum! In cupiditate
-    quisquam debitis reiciendis amet enim perferendis saepe quibusdam,
-    laborum, perspiciatis ex. Illum ipsa optio blanditiis quaerat quia
-    velit pariatur suscipit quam ducimus architecto cumque autem quibusdam
-    tempore veniam repellendus, aliquid ex doloribus magni! Accusantium
-    exercitationem doloremque rem ipsam corporis cupiditate eum totam
-    ratione, facilis repellendus alias, ipsa dolore, expedita molestiae?
-    Minima, eos quia sequi deleniti ipsum amet vero.
+    The area for our group is Kensington. Kensington is a Business Revitalization Zone, also known as the coolest community in Calgary. From the architecture and buildings, it is not only a historic community but also has an energetic vibe around the area. Combining those elements, it creates a casual and relaxing atmosphere for people to hang out.
   </p>
   <div class="row">
     <div class="imgBox">

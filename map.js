@@ -1,13 +1,13 @@
 // Map and tooltip
 const allhover = document.querySelectorAll(".pin");
 const root = document.getElementById("map");
-console.log(namelist);
+
 allhover.forEach((elem,index)=>{
     // console.log(elem.getBoundingClientRect());
     let locate = elem.getBoundingClientRect();
     let x = locate.x;
     let y = locate.y;
-    let addname = namelist[index];
+    let addname = "test "+index;
     var ids = "building"+index;
     
     createTooltip(x,y,addname,index);
@@ -34,7 +34,7 @@ function createTooltip(x,y,text,index){
  let container = document.createElement("div");
  container.classList.add("pa-sm");
  let closeBtn = document.createElement("button");
- closeBtn.innerHTML="<i class='fa-solid fa-xmark'></i>";
+ closeBtn.innerHTML="x";
  closeBtn.classList="closeBtn";
  let buildingName = document.createElement("h3");
  let desc = document.createElement("p");
@@ -56,8 +56,8 @@ if(screenwide>600){
 }
 //  the coordinates are only for desktop
   
-    buildingName.innerHTML=text[0];
-    desc.innerHTML=text[1];
+    buildingName.innerHTML=text;
+    desc.innerHTML="text";
     container.appendChild(buildingName);
     container.appendChild(desc);
     elem.appendChild(closeBtn);
@@ -66,7 +66,7 @@ if(screenwide>600){
     root.appendChild(elem);
 }
 // the tooltips closing button
-let closeBtn = document.querySelectorAll(".closeBtn");
+let closeBtn = document.querySelectorAll(".closeBtn i");
 closeBtn.forEach(item=>item.addEventListener("click",(e)=>e.target.parentElement.parentElement.classList.add("hidden")));
 
 
@@ -84,8 +84,11 @@ function sizeSvg(){
 sizeSvg();
 window.addEventListener("resize",()=>sizeSvg());
 
-// Responsive
-// if screen width > 600px show full map -->> <svg width unset>
+// instruciton
+var msg = document.getElementById("msg");
+setTimeout(function(){ msg.style.opacity="0"}, 1500);
+setTimeout(function(){ msg.style.display="none";msg.classList.remove("flexbox");}, 2000);
+
 
 
 
