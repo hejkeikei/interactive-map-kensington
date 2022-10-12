@@ -1,7 +1,7 @@
 <?php
 ob_start();
 include("header.php");
-$point = $_COOKIE['points'];
+$point = $_COOKIE['point'];
 
 // Generate coupon
 function generateRandomString($length = 6)
@@ -45,8 +45,8 @@ function generateRandomString($length = 6)
     </h2>
     <div id="reward">
         <?php
-        $pointsNow = $_COOKIE['points'];
-        if (isset($_COOKIE['points'])) {
+        $pointsNow = $_COOKIE['point'];
+        if (isset($_COOKIE['point'])) {
             if ($pointsNow == 10) {
                 echo '<h3>Reward: Free Coffee</h3>
                 <p>Use this promo code at Jitters to redeem your free coffee!</p>
